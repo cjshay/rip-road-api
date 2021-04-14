@@ -35,11 +35,13 @@ run nodemon server.js
 
 ### All possible routes include
 
-**GET** - localhost:8080/locations
+**GET** - localhost:8080/location
 
-**POST** - localhost:8080/userCreate
+**POST** - localhost:8080/user
 
-**POST** - localhost:8080/userLogin
+**POST** - localhost:8080/session
+
+**DELETE** - localhost:8080/endSession
 
 ### Approach
 
@@ -70,4 +72,3 @@ because you could have:
 where locationName is the actual location name (e.g New York). One problem is having multiple third parties. A solution would be to either limit locations, or continously cache larger and more popular locations.
 
 I selected `tomorrow.io` for the purposes of this exercise because it is free and easy to obtain an API key for. However, if I had more resources for this project I would probably switch to Googles Paid Geocode API which would eliminate the inconveniences of searching by specific lat/long coordinates, as well as allow users to retrieve information in Fahrenheit or Celsius.
-
