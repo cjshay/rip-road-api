@@ -1,7 +1,7 @@
 const userData = require('../../data/users.json');
 
-const verifyUserExists = (userName) => {
-    if (userData[userName]) {
+const verifyUserExists = (username) => {
+    if (userData[username] && userData[username].sessionActive === true) {
         return true;
     }
     return false;

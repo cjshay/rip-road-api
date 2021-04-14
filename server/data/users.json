@@ -1,16 +1,19 @@
 {
     "greg": {
-        "userName": "greg",
+        "username": "greg",
+        "sessionActive": false,
         "locations": []
     },
     "tim": {
-        "userName": "tim",
+        "username": "tim",
+        "sessionActive": true,
         "locations": [
             [-70, 40]
         ]
     },
     "blabla": {
-        "userName": "blabla",
+        "username": "blabla",
+        "sessionActive": false,
         "locations": []
     }
 }

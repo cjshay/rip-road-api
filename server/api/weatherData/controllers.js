@@ -1,20 +1,26 @@
 const {verifyUserExists} = require('../utils/users');
-const {verifyInputs} = require('../utils/inputs');
 
-const {requestWeatherData} = require('./models')
+const {requestWeatherData} = require('./models');
+
+const verifyInputs = (lat, long) => {
+    if (!lat || !long) {
+        return false;
+    }
+    return true;
+}
 
 const retrieveWeatherData = async (data) => new Promise((res) => {
     const {
-        userName,
+        username,
         lat,
         long
     } = data
 
-    if (!verifyUserExists(userName)) {
+    if (!verifyUserExists(username)) {
         res({
             status: 500,
-            type: 'ERR_NON_USER',
-            message: 'User either does not exist, or does not have access'
+            type: 'ERR_USER',
+            message: 'Please Sign in or Sign Up'
         })
     }
     if (!verifyInputs(lat, long)) {
