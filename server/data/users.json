@@ -1,0 +1,16 @@
+{
+    "greg": {
+        "userName": "greg",
+        "locations": []
+    },
+    "tim": {
+        "userName": "tim",
+        "locations": [
+            [-70, 40]
+        ]
+    },
+    "blabla": {
+        "userName": "blabla",
+        "locations": []
+    }
+}
