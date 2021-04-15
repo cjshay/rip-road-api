@@ -22,16 +22,15 @@ const retrieveWeatherData = async (data) => new Promise((res) => {
             type: 'ERR_USER',
             message: 'Please Sign in or Sign Up'
         })
-    }
-    if (!verifyInputs(lat, long)) {
+    } else if (!verifyInputs(lat, long)) {
         res({
             status: 500,
             type: 'ERR_INVLD_COORDS',
             message: 'Inputs invalid. Please check lat, long'
         })
+    } else {
+        res(requestWeatherData(data))
     }
-
-    res(requestWeatherData(data))
 })
 
 module.exports = {

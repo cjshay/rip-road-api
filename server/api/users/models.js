@@ -18,7 +18,7 @@ const writeNewUser = (username) => new Promise(res => {
 		locations: [],
 	}
 
-	res(writeToData(username, "NEW_USER"))
+	res(writeToData(username, userData, "NEW_USER"))
 })
 
 const loginUser = (username) => new Promise(res => {

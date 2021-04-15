@@ -40,5 +40,5 @@ app.get('/location', async (req, res) => {
 })
 
 app.listen(process.env.PORT || port, () => {
-    console.log('Listening')
+    console.log(`Listening on localhost port ${port}`)
 })
